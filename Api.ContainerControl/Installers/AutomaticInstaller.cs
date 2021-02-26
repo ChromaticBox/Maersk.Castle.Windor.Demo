@@ -18,9 +18,6 @@ namespace Api.ContainerControl.Installers
             var automaticRegistration= bool.Parse(container.Resolve<IConfiguration>()["AutomaticRegistration"]);
             if(!automaticRegistration) return;
 
-            var logger = container.Resolve<ILogger<ManualInstaller>>();
-            logger.LogInformation("ManualInstaller Install");
-
             container.Register(Classes.FromAssemblyInThisApplication(Assembly.GetExecutingAssembly())
                 .Where(t => !t.IsDefined(typeof(SingletonAttribute), true))
                 .Configure(component =>
