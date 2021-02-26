@@ -3,6 +3,7 @@ using System.Reflection;
 using Api.Basic.Extensions;
 using Api.Basic.Impl;
 using Api.Basic.Impl.Interfaces;
+using Api.Basic.Installers;
 using Castle.Core;
 using Castle.MicroKernel;
 using Castle.Windsor;
@@ -55,7 +56,7 @@ namespace Api.Basic
             logger.LogInformation("Startup ConfigureContainer");
 
             //container.Install(FromAssembly.InThisApplication(Assembly.GetEntryAssembly()));
-            //container.Install(new AutomaticInstaller(), new ManualInstaller());
+            container.Install(new AutomaticInstaller(), new ManualInstaller());
             //GetRegisteredComponentsFromCastleWindsorDiagnostics(container);
         }
 
