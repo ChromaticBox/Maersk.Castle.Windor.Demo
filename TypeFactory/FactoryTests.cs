@@ -10,6 +10,8 @@ using TypeFactory.Impl.Interfaces;
 
 namespace TypeFactory
 {
+    ////https://github.com/castleproject/Windsor/blob/master/docs/facilities.md
+
     [TestFixture]
     public class FactoryTests
     {

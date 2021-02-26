@@ -23,6 +23,7 @@ namespace TypeFactory.Impl
         {
             if(_isDisposing) return;
             _isDisposing = true;
+            _bar.Dispose();
             _fooFactory.Release(this);
         }
     }
