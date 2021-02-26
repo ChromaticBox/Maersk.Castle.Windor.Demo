@@ -40,7 +40,6 @@ namespace Api.ContainerControl
             if (fridayBar == null) throw new INeedABeerException();
 
             //e.g. var cookieEvents = new CookieAuthenticationEventsWrapper(settings, **container.Resolve<IDictionaryCache<string, CookieAuthenticationEventUser>>(), container.Resolve<ICookieUserCache>(), container.Resolve<ICqrsDispatcher>());**
-
             services.AddControllers().AddControllersAsServices(); 
         }
 
