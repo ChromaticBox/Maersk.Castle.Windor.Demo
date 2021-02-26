@@ -14,8 +14,6 @@ namespace Api.Basic
 
     public class Startup
     {
-        internal static IWindsorContainer Container = new WindsorContainer();
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
